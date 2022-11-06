@@ -8,6 +8,7 @@
   --accent-clr-blue: #2196f3;
   --border-clr: #ececec;
   --icon-clr-grey: #afb1b8;
+
   --ff-main: 'Roboto';
   --ff-logo: 'Raleway';
   --fs-main: 14px;
@@ -22,6 +23,8 @@
   --fw-header: 700;
   --fw-hero-button: 700;
   --fw-hero: 900;
+
+  --trans-func: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /* GENERAL */
@@ -124,6 +127,19 @@ img {
   margin-left: 93px;
   display: flex;
   gap: 50px;
+  align-items: baseline;
+}
+
+.current::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 100vh;
+  background-color: var(--accent-clr-blue);
+  
+  position: relative;
+  top: 47px;
 }
 
 .header .contacts {
@@ -148,6 +164,7 @@ img {
   color: var(--txt-clr-header);
   letter-spacing: 0.02em;
   font-weight: var(--fw-medium);
+  transition: color 250ms var(--trans-func), fill 250ms var(--trans-func);
 }
 
 .current {
@@ -252,12 +269,23 @@ img {
   column-gap: 30px;
 }
 
-.section-header {
+.services-title {
   font-size: var(--fs-header);
   text-align: center;
   margin-bottom: 50px;
 }
 
+.service-title {
+  position: relative;
+  bottom: 70px;
+  width: 100%;
+  line-height: 70px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--txt-clr-white);
+  font-weight: var(--fw-header);
+  background-color: rgba(47, 48, 58, 0.8);
+}
 /* team */
 
 .section.team {
