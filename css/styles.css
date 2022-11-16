@@ -164,7 +164,7 @@ img {
   color: var(--txt-clr-header);
   letter-spacing: 0.02em;
   font-weight: var(--fw-medium);
-  transition: color 250ms var(--trans-func), fill 250ms var(--trans-func);
+  transition: color 250ms var(--trans-func);
 }
 
 .current {
@@ -174,7 +174,6 @@ img {
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-clr-blue);
-  fill: var(--accent-clr-blue);
 }
 
 .header-contact {
@@ -183,11 +182,13 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  transition: color 250ms var(--trans-func);
 }
 
 .icon-phone,
 .icon-envelope {
   fill: currentColor;
+  transition: fill 250ms var(--trans-func);
 }
 
 /* STUDIO MAIN*/
@@ -241,6 +242,8 @@ img {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms var(--trans-func);
 }
 
 .backdrop.is-hidden {
@@ -262,7 +265,7 @@ img {
   border-radius: 4px;
 
   transform: translate(-50%, -50%);
-  transition: opacity 250ms var(--trans-fanc);
+  transition: opacity 250ms var(--trans-func);
 }
 
 .modal-close-button {
@@ -339,8 +342,10 @@ img {
   position: absolute;
   bottom: 0;
   width: 100%;
-  line-height: 70px;
-  text-align: center;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   color: var(--txt-clr-white);
   font-weight: var(--fw-header);
@@ -481,7 +486,7 @@ img {
   max-height: 294px;
   transition-property: box-shadow;
   transition-duration: 250ms;
-  transition-timing-function: var(--trans-fanc);
+  transition-timing-function: var(--trans-func);
   overflow: hidden;
 }
 
@@ -505,16 +510,17 @@ img {
   transform: translateY(100%);
   transition-property: transform;
   transition-duration: 250ms;
-  transition-timing-function: var(--trans-fanc);
+  transition-timing-function: var(--trans-func);
 }
 
 .project-link:hover .overlay,
-.progect-link:focus .overlay {
+.project-link:focus .overlay {
   transform: translateY(0);
 }
 
 .project-link {
   display: block;
+  transition: box-shadow 250ms var(--trans-func);
 }
 
 .project-link:hover,
@@ -601,7 +607,7 @@ img {
 
 .contact,
 .location {
-  transition: color 250ms var(--trans-fanc);
+  transition: color 250ms var(--trans-func);
 }
 
 /* hover, focus for FOOTER and HEADER contacts*/
